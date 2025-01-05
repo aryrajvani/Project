@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="./css/homepagestyle.css">
+    
+</head>
+<body>
+    <div class="top-header">
+        <div>
+            Offers | Fanbook | Download App | Find a store near me
+        </div>
+        <div>
+            Contact Us | Track Order
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="top-nav">
+            <div class="logo">
+                <img src="./images/Drip2.jpg" alt="Boujee Logo" style="height: 80px;">
+            </div>
+            <div class="middle-nav">
+                <div class="dropdown-container">
+                    <a href="#">MEN</a>
+                    <div class="dropdown">
+                        <a href="#">T-Shirts</a>
+                        <a href="#">Shirts</a>
+                        <a href="#">Jeans</a>
+                    </div>
+                </div>
+                <div class="dropdown-container">
+                    <a href="#">WOMEN</a>
+                    <div class="dropdown">
+                        <a href="#">Dresses</a>
+                        <a href="#">Tops</a>
+                        <a href="#">Jeans</a>
+                    </div>
+                </div>
+                <!--<div class="dropdown-container">
+                    <a href="#">MOBILE COVERS</a>
+                    <div class="dropdown">
+                        <a href="#">iPhone</a>
+                        <a href="#">Samsung</a>
+                        <a href="#">OnePlus</a>
+                    </div>
+                </div>-->
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by products">
+            </div>
+            <div class="user-actions">
+                <a href="#" id="login-btn">LOGIN</a>
+                <a href="#">❤</a>
+                <a href="#" id="cart-btn" onclick="openCart()">🛒  <span id="count">0</span></a>
+            </div>
+        </div>
+        <div class="bottom-nav">
+            <a href="#">WINTERWEAR</a>
+            <a href="#">ACCESSORIES</a>
+            <a href="#">OFFICIAL MERCH</a>
+            
+            
+            <a href="#">HEAVY DUTY</a>
+            <a href="#">CUSTOMIZATION</a>
+            <a href="#">PLUS SIZE</a>
+        </div>
+    </div>
+    <!--Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="./images/banner 1.jpg" alt="Banner 1">
+            <img src="./images/banner 2.jpg" alt="Banner 2">
+            <img src="./images/banner 3.jpg" alt="Banner 3">
+            <img src="./images/banner 4.jpg" alt="Banner 4">
+            <img src="./images/banner 5.jpg" alt="Banner 5">
+        </div>
+    </div>
+        <!-- Main Content: Product Listing -->
+        <div class="All product-listing">
+            <div class="product">
+                <img src="./images/WP8.jpg" alt="Product 1">
+                <h3>Sweatshirt</h3>
+                <p>Price: $29.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 1', 19.99)">Add to Cart</button>
+                
+
+            </div>
+            <div class="product">
+                <img src="./images/WP7.jpg" alt="Product 2">
+                <h3>Winter wear</h3>
+                <p>Price: $19.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 2', 19.99)">Add to Cart</button>
+                <!-- Flash Message -->
+
+            </div>
+            <div class="product">
+                <img src="./images/Product 4.jpg" alt="Product 3">
+                <h3>Sweater</h3>
+                <p>Price: $9.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/WP5.jpg" alt="Product 3">
+                <h3>Sweatshirt</h3>
+                <p>Price: $59.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="./images/Wp9.jpg" alt="Product 3">
+                <h3>Long Coat</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="./images/Wp13.jpg" alt="Product 3">
+                <h3>Sweater</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="./images/Wp12.jpg" alt="Product 3">
+                <h3>Sweatshirt</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="./images/WP2.jpg" alt="Product 3">
+                <h3>Sweater</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+
+        </div>
+        <div class="Men's product-listing">
+            <div class="product">
+                <img src="./images/Product 1.jpg" alt="Product 1">
+                <h3>Overcoat</h3>
+                <p>Price: $19.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 1', 19.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Product 2.jpg" alt="Product 2">
+                <h3>Trench coat</h3>
+                <p>Price: $29.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 2', 19.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Mp1.jpg" alt="Product 3">
+                <h3>Sweatshirt</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Mp2.jpg" alt="Product 3">
+                <h3>Sweatshirt</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="./images/Mp3.jpg" alt="Product 3">
+                <h3>Sweat shirt</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="./images/Mp4.jpg" alt="Product 3">
+                <h3>Sweat shirt</h3>
+                <p>Price: $39.99</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="./images/Mp5.jpg" alt="Product 3">
+                <h3>Winter wear</h3>
+                <p>Price: $39.99</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="./images/Mp6.jpg" alt="Product 3">
+                <h3>Winter wear</h3>
+                <p>Price: $39.99</p>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+        
+        
+
+        <!-- Main Content: Product Listing -->
+<div class="product-categories">
+    <!-- Best Seller Category -->
+    <div class="category-section">
+        <h2>Best Seller</h2>
+        <div class="product-listing">
+            <div class="product">
+                <img src="./images/WP8.jpg" alt="Best Seller Product 1">
+                <h3>Overcoat</h3>
+                <p>Price: $29.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 1', 19.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/WP7.jpg" alt="Best Seller Product 2">
+                <h3>Trench coat</h3>
+                <p>Price: $19.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 2', 19.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Product 4.jpg" alt="Best Seller Product 3">
+                <h3>Sweatshirt</h3>
+                <p>Price: $9.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 3', 19.99)">Add to Cart</button>
+            </div>
+        </div>
+        <a href="productlising.html" class="see-more">See More</a>
+    </div>
+        </div>
+    </div>
+
+    <!-- Flash Sale Category -->
+    <div class="category-section">
+        <h2>Flash Sale</h2>
+        <div class="product-listing">
+            <div class="product">
+                <img src="./images/WP5.jpg" alt="Flash Sale Product 1">
+                <h3>Women's sweater</h3>
+                <p>Price: $59.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 4', 59.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/WP1.jpg" alt="Flash Sale Product 2">
+                <h3>Knitted sweater</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 5', 39.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Product 2.jpg" alt="Flash Sale Product 3">
+                <h3>Men's knitted sweater</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Product Name 6', 39.99)">Add to Cart</button>
+            </div>
+        </div>
+        
+        <a href="productlising.html" class="see-more">See More</a>
+    </div>
+        </div>
+    </div>
+
+    <!-- Men's Category -->
+    <div class="category-section">
+        <h2>Men's</h2>
+        <div class="product-listing">
+            <div class="product">
+                <img src="./images/Product 1.jpg" alt="Men's Product 1">
+                <h3>Olive Sweatshirt</h3>
+                <p>Price: $19.99</p>
+                <button class="add-to-cart" onclick="addToCart('Men\'s Product 1', 19.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Product 3.jpg" alt="Men's Product 2">
+                <h3>Colorblocked Sweatshirt </h3>
+                <p>Price: $29.99</p>
+                <button class="add-to-cart" onclick="addToCart('Men\'s Product 2', 29.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Product 4.jpg" alt="Men's Product 3">
+                <h3>Stripped Sweatshirt</h3>
+                <p>Price: $19.99</p>
+                <button class="add-to-cart" onclick="addToCart('Men\'s Product 3', 39.99)">Add to Cart</button>
+            </div>
+        </div>
+        <a href="productlising.html" class="see-more">See More</a>
+    </div>
+        </div>
+    </div>
+
+    <!-- Women's Category -->
+    <div class="category-section">
+        <h2>Women's</h2>
+        <div class="product-listing">
+            <div class="product">
+                <img src="./images/WP4.jpg" alt="Women's Product 1">
+                <h3>Knitted Sweater</h3>
+                <p>Price: $39.99</p>
+                <button class="add-to-cart" onclick="addToCart('Women\'s Product 1', 39.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/WP6.jpg" alt="Women's Product 2">
+                <h3>Sweat shirt</h3>
+                <p>Price: $29.99</p>
+                <button class="add-to-cart" onclick="addToCart('Women\'s Product 2', 39.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/WP7.jpg" alt="Women's Product 3">
+                <h3>Trench coat</h3>
+                <p>Price: $49.99</p>
+                <button class="add-to-cart" onclick="addToCart('Women\'s Product 3', 39.99)">Add to Cart</button>
+            </div>
+             </div>
+             <a href="productlising.html" class="see-more">Explore More</a>
+    </div>
+        </div>
+    </div>
+</div>
+
+
+    <!--cart-->
+        <div id="cart-modal" class="cart-modal">
+            <div class="cart-modal-content">
+                <h3>Your Cart</h3>
+                <ul id="cart-items">
+                    <!-- Cart items will appear here -->
+                </ul>
+                <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
+                <button onclick="clearCart()">Clear Cart</button>
+                <button onclick="checkout()">Checkout</button>
+                <button onclick="closeCart()">Close</button>
+            </div>
+        </div>
+
+    
+        <!-- Footer -->
+        <footer class="footer">
+            
+            <footer style="background-color:#555; color: #fff; padding: 20px 0; font-family: Arial, sans-serif;">
+                <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+                    
+                    <!-- Customer Service Section -->
+                    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                        <h4 style="color: #ffd700; margin-bottom: 10px;">CUSTOMER SERVICE</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="#" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none;">Track Order</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none;">Return Order</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none;">Cancel Order</a></li>
+                        </ul>
+                        <p style="margin-top: 10px; font-size: 0.9em;">
+                            <img src="icon1.png" alt="" style="vertical-align: middle;"> 15 Days Return Policy<br>
+                            <img src="icon2.png" alt="" style="vertical-align: middle;"> Cash On Delivery*
+                        </p>
+                        <div>
+                            <h4>Follow Us</h4>
+                            <p>Facebook | Twitter | Instagram</p>
+                        </div>
+                    </div>
+            
+                    <!-- Company Section -->
+                    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                        <h4 style="color: #ffd700; margin-bottom: 10px;">COMPANY</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="#" style="color: #fff; text-decoration: none;">About Us</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none;">Terms & Conditions</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none;">We Are Hiring</a></li>
+                        </ul>
+                    </div>
+            
+                    <!-- Connect With Us -->
+                    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                        <h4 style="color: #ffd700; margin-bottom: 10px;">CONNECT WITH US</h4>
+                        <p>
+                            <a href="#" style="color: #fff; text-decoration: none;">4.7M People like this</a><br>
+                            <a href="#" style="color: #fff; text-decoration: none;">1M People like this</a>
+                        </p>
+                        
+                    </div>
+            
+                    <!-- Subscribe Section -->
+                    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                        <h4 style="color: #ffd700; margin-bottom: 10px;">KEEP UP TO DATE</h4>
+                        <form>
+                            <input type="email" placeholder="Enter Email ID" style="padding: 8px; width: 70%; margin-bottom: 10px;">
+                            <button type="submit" style="padding: 8px; background-color: #ffd700; border: none; cursor: pointer;">SUBSCRIBE</button>
+                        </form>
+                    </div>
+            
+                </div>
+                <div style="max-width: 1200px; margin: 0 auto; border-top: 1px solid #555; padding: 20px 0; text-align: center; font-size: 0.9em;">
+                    <p>© 2025 Boujee. All rights reserved.</p>
+                </div>
+            </footer>
+            
+        </footer>>
+        <script src="./js/script2.js"></script>
+
+        <script>document.addEventListener("DOMContentLoaded", function() {
+            const loginButton = document.getElementById("login-btn");
+        
+            // Add click event listener for the login button
+            loginButton.addEventListener("click", function(event) {
+              event.preventDefault();  // Prevent the default anchor behavior (which would reload the page)
+        
+              // Redirect to the login.html page
+              window.location.href = "login.html";
+            });
+          });</script>
+          <script>
+            let currentIndex = 0;
+            const images = document.querySelectorAll('.slider img');
+            const totalImages = images.length;
+            const slider = document.querySelector('.slider');
+        
+            function moveToNextImage() {
+                currentIndex = (currentIndex + 1) % totalImages;
+                const offset = -currentIndex * 100;
+                slider.style.transform = `translateX(${offset}%)`;
+            }
+        
+            setInterval(moveToNextImage, 5000); // Rotate every 5 seconds
+        </script>
+        
+            <script>// Function to add products to the cart
+                function addToCart(productName, productPrice) {
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                    // Check if the product is already in the cart
+                    let existingProductIndex = cart.findIndex(item => item.name === productName);
+                    if (existingProductIndex !== -1) {
+                        cart[existingProductIndex].quantity += 1;
+                        alert(productName + ' added to cart!'); // Increment quantity if product is already in the cart
+                    } else {
+                        // If product is not in the cart, add it
+                        cart.push({ name: productName, price: productPrice, quantity: 1 });
+                       
+                    }
+                
+                    // Save the updated cart to localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                
+                    // Update cart count in the UI
+                    updateCartCount();
+                
+                    // Optionally, you can open the cart modal automatically when an item is added
+                    showCart();
+                    
+                }
+               
+
+                // Function to update the cart count displayed in the navigation bar
+                function updateCartCount() {
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    let cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+                    document.getElementById('count').textContent = cartCount; 
+                    alert(product + ' added to cart!'); // Updated to use 'count' from HTML
+                }
+                
+                // Function to open the cart modal
+                function openCart() {
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    let cartItemsList = document.getElementById('cart-items');
+                    let totalPrice = 0;
+                
+                    // Clear previous cart items
+                    cartItemsList.innerHTML = '';
+                
+                    cart.forEach(item => {
+                        totalPrice += item.price * item.quantity;
+                        let listItem = document.createElement('li');
+                        listItem.textContent = `${item.name} - $${item.price} x ${item.quantity}`;
+                        cartItemsList.appendChild(listItem);
+                    });
+                
+                    // Update total price
+                    document.getElementById('cart-total').textContent = totalPrice.toFixed(2);
+                
+                    // Display the cart modal
+                    document.getElementById('cart-modal').style.display = 'block';
+                }
+                
+                // Function to close the cart modal
+                function closeCart() {
+                    document.getElementById('cart-modal').style.display = 'none';
+                }
+                
+                // Function to clear the cart
+                function clearCart() {
+                    localStorage.removeItem('cart');
+                    updateCartCount();
+                    closeCart();
+                }
+                
+                // Function to handle the checkout process
+                function checkout() {
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    if (cart.length > 0) {
+                        alert('Proceeding to checkout...');
+                        // Implement further checkout logic (e.g., redirect to checkout page).
+                    } else {
+                        alert('Your cart is empty.');
+                    }
+                }
+                
+                // Load cart count when the page loads
+                window.onload = function() {
+                    updateCartCount();
+                };
+                </script>
+        
+</body>
+</html>
+

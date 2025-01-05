@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product listing page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html { margin: 0; font-family: Arial, sans-serif; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        .nav-bar { display: flex; justify-content: space-between; padding: 20px; background: #f4f4f4; }
+        .nav-bar a { text-decoration: none; padding: 0 15px; color: #333; }
+        .products { display: flex; flex-wrap: wrap; gap: 20px; }
+        .product { border: 1px solid #ddd; padding: 15px; width: 30%; }
+        .product img { width: 100%; }
+        .cart { margin-top: 20px; padding: 20px; border: 1px solid #ddd; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="#" id="home">Home</a>
+        <a href="#" id="products">Products</a>
+        <a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+        <a href="#" id="login">Login</a>
+    </div>
+
+    <div class="container">
+        <!-- LOGIN PAGE -->
+        <div id="login-page" class="hidden">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" placeholder="Username" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- PRODUCT LISTING -->
+        <div id="product-listing">
+            <h2>Products</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="shirt.jpg" alt="T-Shirt">
+                    <h3>Black T-Shirt</h3>
+                    <p>$20</p>
+                    <button onclick="addToCart('Black T-Shirt', 20)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="hoodie.jpg" alt="Hoodie">
+                    <h3>Hoodie</h3>
+                    <p>$40</p>
+                    <button onclick="addToCart('Hoodie', 40)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT DETAILS PAGE -->
+        <div id="product-detail" class="hidden">
+            <img src="shirt.jpg" alt="Product Image">
+            <h2>Black T-Shirt</h2>
+            <p>Price: $20</p>
+            <button onclick="addToCart('Black T-Shirt', 20)">Add to Cart</button>
+        </div>
+
+        <!-- CART -->
+        <div id="cart-page" class="hidden">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            document.getElementById('cart-count').innerText = cart.length;
+            alert(product + ' added to cart!');
+        }
+
+        function showPage(pageId) {
+            document.querySelectorAll('.container > div').forEach(page => {
+                page.classList.add('hidden');
+            });
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+
+        document.getElementById('login-form').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Logged In Successfully!');
+            showPage('product-listing');
+        };
+
+        document.getElementById('cart-link').onclick = function() {
+            let cartHTML = '';
+            cart.forEach(item => {
+                cartHTML += `<p>${item.product} - $${item.price}</p>`;
+            });
+            document.getElementById('cart-items').innerHTML = cartHTML;
+            showPage('cart-page');
+        };
+
+        function checkout() {
+            alert('Checkout Successful!');
+            cart = [];
+            document.getElementById('cart-count').innerText = 0;
+            showPage('product-listing');
+        }
+
+        document.getElementById('login').onclick = function() {
+            showPage('login-page');
+        };
+
+        document.getElementById('products').onclick = function() {
+            showPage('product-listing');
+        };
+    </script>
+</body>
+</html>

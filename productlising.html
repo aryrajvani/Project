@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="stylesheet" href="./css/homepagestyle.css">
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div>
+                Offers | Fanbook | Download App | Find a store near me
+            </div>
+            <div>
+                Contact Us | Track Order
+            </div>
+        </div>
+        <div class="nav-bar">
+            <div class="top-nav">
+                <div class="logo">
+                    <img src="./images/Drip2.jpg" alt="Boujee Logo" style="height: 80px;">
+                </div>
+                <div class="middle-nav">
+                    <div class="dropdown-container">
+                        <a href="#">MEN</a>
+                        <div class="dropdown">
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Shirts</a>
+                            <a href="#">Jeans</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="#">WOMEN</a>
+                        <div class="dropdown">
+                            <a href="#">Dresses</a>
+                            <a href="#">Tops</a>
+                            <a href="#">Jeans</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="#">MOBILE COVERS</a>
+                        <div class="dropdown">
+                            <a href="#">iPhone</a>
+                            <a href="#">Samsung</a>
+                            <a href="#">OnePlus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by products">
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="login-btn">LOGIN</a>
+                    <a href="#">❤</a>
+                    <a href="#" id="cart-btn" onclick="openCart()">🛒  <span id="count">0</span></a>
+                </div>
+            </div>
+            <div class="bottom-nav">
+                <a href="#">WINTERWEAR</a>
+                <a href="#">ACCESSORIES</a>
+                <a href="#">OFFICIAL MERCH</a>
+                <a href="#">HEAVY DUTY</a>
+                <a href="#">CUSTOMIZATION</a>
+                <a href="#">PLUS SIZE</a>
+            </div>
+        </div>
+        
+    </header>
+    <main class="container">
+        <aside class="filters">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <h4>Gender</h4>
+                <label><input type="checkbox" value="Men"> Men</label>
+                <label><input type="checkbox" value="Women"> Women</label>
+            </div>
+            <div class="filter-group">
+                <h4>Size</h4>
+                <label><input type="checkbox" value="S"> S</label>
+                <label><input type="checkbox" value="M"> M</label>
+                <label><input type="checkbox" value="L"> L</label>
+            </div>
+            <div class="filter-group">
+                <h4>Color</h4>
+                <label><input type="checkbox" value="Black"> Black</label>
+                <label><input type="checkbox" value="White"> White</label>
+                <label><input type="checkbox" value="Blue"> Blue</label>
+            </div>
+        </aside>
+        <section class="product-listing">
+            <div class="product" data-gender="Men" data-size="M" data-color="Blue">
+                <img src="./images/1.jpg" alt="Product 1">
+                <h3>Blue T-Shirt</h3>
+                <p>$59</p>
+            </div>
+            <div class="product" data-gender="Women" data-size="L" data-color="Black">
+                <img src="./images/2.jpg" alt="Product 2">
+                <h3>Black T-Shirt</h3>
+                <p>$69</p>
+            </div>
+            <div class="product" data-gender="Women" data-size="L" data-color="Grey">
+                <img src="./images/2.jpg" alt="Product 2">
+                <h3>Black T-Shirt</h3>
+                <p>$69</p>
+            </div>
+            <div class="product" data-gender="Women" data-size="S" data-color="White">
+                <img src="./images/3.jpg" alt="Product 2">
+                <h3>Black T-Shirt</h3>
+                <p>$69</p>
+            </div>
+            <div class="product" data-gender="Men" data-size="M" data-color="Green">
+                <img src="./images/4.jpg" alt="Product 2">
+                <h3>Black T-Shirt</h3>
+                <p>$69</p>
+            </div>
+            <div class="product" data-gender="Women" data-size="XL" data-color="Neon">
+                <img src="./images/5.jpg" alt="Product 2">
+                <h3>Black T-Shirt</h3>
+                <p>$69</p>
+            </div>
+            <div class="product" data-gender="Men" data-size="L" data-color="Black">
+                <img src="./images/6.jpg" alt="Product 2">
+                <h3>Black T-Shirt</h3>
+                <p>$69</p>
+            </div>
+            <div class="product" data-gender="Women" data-size="S" data-color="White">
+                <img src="./images/7.jpg" alt="Product 2">
+                <h3>Black T-Shirt</h3>
+                <p>$69</p>
+            </div>
+            <div class="product" data-gender="Women" data-size="S" data-color="Black">
+                <img src="./images/8.jpg" alt="Product 2">
+                <h3>Black T-Shirt</h3>
+                <p>$69</p>
+            </div>
+            <!-- Add more products as required -->
+        </section>
+    </main>
+    <script src="./js/script3.js"></script>
+</body>
+</html>

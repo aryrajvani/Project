@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Signup Toggle</title>
+  <link rel="stylesheet" href="./css/loginstyle.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <div class="form-header">
+        <button id="login-btn" class="toggle-btn active" onclick="toggleForm('login')">Login</button>
+        <button id="signup-btn" class="toggle-btn" onclick="toggleForm('signup')">Signup</button>
+      </div>
+      
+        
+        <div id="otp-container-login" style="display:none;">
+          <label for="otp-login">Enter OTP:</label>
+          <input type="text" id="otp-login" placeholder="Enter OTP" required>
+          <button type="button" onclick="verifyOTP('login')">Verify OTP</button>
+        </div>
+      </form>
+      <div class="form-content">
+        <form id="login-form" class="form" style="display: block;">
+          <label for="login-phone">Phone Number:</label>
+          <input type="text" id="login-phone" placeholder="Enter phone number" required>
+          <button type="button" onclick="sendOTP('login')">Send OTP</button>
+        </form>
+
+        <form id="signup-form" class="form" style="display: none;">
+          <label for="signup-phone">Phone Number:</label>
+          <input type="text" id="signup-phone" placeholder="Enter phone number" required>
+          <button type="button" onclick="sendOTP('login')">Send OTP</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/loginscript.js"></script>
+</body>
+</html>

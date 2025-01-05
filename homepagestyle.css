@@ -1,0 +1,457 @@
+body, html {
+    margin: 0;
+    font-family: cursive;
+}
+.top-header {
+    background-color: #f0f0f0;
+    padding: 5px 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555;
+}
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+    /* Add this to your styles2.css */
+.logo img {
+    height: 500px;          /* Set height of the logo */
+    width: auto;           /* Maintain aspect ratio */
+    display: block;        /* Ensures the logo is a block element */
+    margin: 0 auto;        /* Center the logo horizontally */
+}
+
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+.user-actions {
+    display: flex;
+    gap: 15px;
+}
+.user-actions a {
+    text-decoration: none;
+    color: black;
+}
+.middle-nav {
+    display: flex;
+    gap: 30px;
+}
+.middle-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    position: relative;
+}
+.middle-nav a:hover + .dropdown, .dropdown:hover {
+    display: block;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    top: 35px;
+}
+.dropdown a {
+    padding: 10px 20px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+.dropdown-container {
+    position: relative;
+}
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+}
+.bottom-nav a {
+    text-decoration: none;
+    color: black;
+}
+/*slider*/
+/* Container for the image slider */
+.slider-container {
+    width: 100%;              /* Full width of the container */
+    height: 100vh;            /* Full height of the viewport */
+    overflow: hidden;         /* Hide any images that are out of view */
+    position: relative;
+}
+
+/* Slider that holds the images */
+.slider {
+    display: flex;            /* Display images in a row */
+    transition: transform 1s ease-in-out; /* Smooth transition for image sliding */
+    height: 100%;             /* Ensure the slider takes up the full height of the container */
+}
+
+/* Style for each image */
+.slider img {
+    width: 100%;              /* Each image will take up the full width of the container */
+    height: 80%;             /* Make each image cover the entire height */
+    object-fit: cover;        /* Crop the images to fit the container */
+    flex-shrink: 0;           /* Prevent images from shrinking */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .slider-container {
+        height: 60vh;        /* Adjust height on smaller screens, 60% of viewport height */
+    }
+    .slider img {
+        object-fit: contain;  /* Ensure images are scaled to fit and maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        height: 50vh;        /* Further reduce height on very small screens */
+    }
+    .slider img {
+        object-fit: contain;  /* Ensure images are scaled to fit */
+    }
+}
+
+/* Main Content: Product Listing */
+.product-listing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product p {
+    color: #888;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.product button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+/* Ensure all product images have fixed width and height */
+.product img {
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Ensures the image doesn't stretch and keeps its aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+/* Optionally, you can also set styles for the product container to make sure it aligns well */
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/*category*/
+/* Home Decor Category Section */
+.category-section {
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+/* Title of the Category */
+.category-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Product Container */
+.Accessory.NewArrivals {
+    display:inline-block;
+    width: 45%;
+    margin: 15px 2.5%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on product cards */
+.Accessory .NewArrivals:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.Accessory .NewArrivals img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Product Title */
+.Accessory .NewArrivals h3 {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Product Price */
+.Accessory .NewArrivals p {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+/* Add to Cart Button*/ 
+.Accessory .NewArrivals .add-to-cart {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* new section of categories
+.newproduct-listing {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.newproduct {
+    width: 23%; /* Adjust width for better spacing 
+    text-align: center;
+}
+
+.newproduct img {
+    width: 100%;
+    height: auto;
+}
+*/
+.hidden {
+    display: none; /* Hide extra products by default */
+}
+
+.see-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.see-more:hover {
+    background-color: #0056b3;
+}
+
+/* Hover effect on Add to Cart button */
+.Accessory .NewArrivals .add-to-cart:hover {
+    background-color: #e64a19;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .category-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .Accessory .NewArrivals{
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .Accessory .NewArrivals img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .Accessory h3 {
+        font-size: 1.2rem;
+    }
+
+    .Accessory p {
+        font-size: 1rem;
+    }
+
+    .Accessory .add-to-cart {
+        font-size: 0.9rem;
+    }
+}
+.flash-message {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.flash-message.show {
+    opacity: 1;
+}
+
+/* Cart Modal Styles */
+.cart-modal {
+    display: none;            /* Hidden by default */
+    position: fixed;          /* Fixed position, so it stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+}
+
+.cart-modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    margin: 100px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cart-modal ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-modal button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-modal button:hover {
+    background-color: #ff4500;
+}
+
+
+/* Footer Styling */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #555;
+    color: #fff;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+}
+
+.footer-section p {
+    font-family: cursive;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-nav, .middle-nav, .bottom-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .search-bar input {
+        width: 100%;
+    }
+}
